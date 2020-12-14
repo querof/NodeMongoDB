@@ -1,3 +1,6 @@
+const {
+    Person
+} = require('../repositories/personRepository');
 const express = require('express');
 const router = express.Router();
 
@@ -9,7 +12,7 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     return res.send({
-        body: req.body.name
+        body: req.body.name + ' ' + req.body.lastname
     });
 });
 
